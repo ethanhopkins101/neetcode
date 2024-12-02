@@ -21,9 +21,11 @@ class Solution:
     def two_sum(self,nums:List[int],target: int)-> List[int]:
         dict_a={}
         result=[]
-        for i in range(nums):
+        for i in range(len(nums)):
             if (target-nums[i]) in dict_a.keys():
                 result=[dict_a[target-nums[i]],i]
             else:
                 dict_a[nums[i]]=i
         return result
+solution=Solution()
+print(solution.two_sum([3,4,5,6,3],7))
